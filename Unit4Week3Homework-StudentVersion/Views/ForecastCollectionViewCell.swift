@@ -66,6 +66,8 @@ class ForecastCollectionViewCell: UICollectionViewCell {
         setupViews()
     }
     
+    
+    
     private func setupViews() {
         setUpDateLabel()
         setupWeatherImageView()

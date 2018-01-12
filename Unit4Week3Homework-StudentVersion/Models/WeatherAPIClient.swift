@@ -28,8 +28,10 @@ class WeatherAPIClient {
         let parseDataIntoForecast: (Data) -> Void = {(data) in
             do {
                 let results = try JSONDecoder().decode(ResponseWrapper.self, from: data)
-                let forecast = results.response[0].periods
+                if let response = results.response.first?.periods {
+                let forecast = response
                 completionHandler(forecast)
+                }
             }
             catch {
                 errorHandler(AppError.codingError(rawError: error))

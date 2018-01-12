@@ -46,7 +46,7 @@ class DetailView: UIView {
         let imageView = UIImageView()
         imageView.backgroundColor = .purple
         imageView.contentMode = .scaleAspectFill
-        imageView.image = #imageLiteral(resourceName: "monkey")
+        imageView.image = nil
         return imageView
     }()
     
@@ -214,7 +214,19 @@ class DetailView: UIView {
         
     }
     
-}
+    public func setupDetailView(with forecast: Forecast, city: String) {
+        self.topLabel.text = "Weather for \(city)"
+        self.highLabel.text = "High: \(forecast.maxTempF)"
+        self.lowLabel.text = "Low: \(forecast.minTempF)"
+        self.sunriseLabel.text = "Sunrise: \(forecast.sunrise)"
+        self.sunsetLabel.text = "Sunset: \(forecast.sunset)"
+        self.windspeedLabel.text = "Windspeed: \(forecast.windSpeedMPH)"
+        self.percipitationLabel.text = "\(forecast.precipIN) Inches"
+        self.conditionLabel.text = "\(forecast.weatherPrimary)"
+    }
+    }
+    
+
     
     
 

@@ -12,6 +12,9 @@
 		5410A6CB1FFFDF1200935A9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5410A6C91FFFDF1200935A9A /* LaunchScreen.storyboard */; };
 		5410A6D31FFFDF6500935A9A /* ZipCodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410A6D21FFFDF6500935A9A /* ZipCodeHelper.swift */; };
 		81E736A32007CE8C009223E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E736A22007CE8C009223E1 /* DetailViewController.swift */; };
+		81E736A52007F3ED009223E1 /* Pixabay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E736A42007F3ED009223E1 /* Pixabay.swift */; };
+		81E736A72007F43E009223E1 /* PixabayAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E736A62007F43E009223E1 /* PixabayAPIClient.swift */; };
+		81E736A920082CB3009223E1 /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E736A820082CB3009223E1 /* ImageAPIClient.swift */; };
 		81E7AE402005758A00F565E1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E7AE3F2005758A00F565E1 /* SearchViewController.swift */; };
 		81E7AE422005761800F565E1 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E7AE412005761800F565E1 /* FavoritesViewController.swift */; };
 		81E7AE442005890F00F565E1 /* ForecastSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E7AE432005890F00F565E1 /* ForecastSearchView.swift */; };
@@ -33,6 +36,9 @@
 		5410A6CC1FFFDF1200935A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5410A6D21FFFDF6500935A9A /* ZipCodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeHelper.swift; sourceTree = "<group>"; };
 		81E736A22007CE8C009223E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		81E736A42007F3ED009223E1 /* Pixabay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixabay.swift; sourceTree = "<group>"; };
+		81E736A62007F43E009223E1 /* PixabayAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayAPIClient.swift; sourceTree = "<group>"; };
+		81E736A820082CB3009223E1 /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
 		81E7AE3F2005758A00F565E1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		81E7AE412005761800F565E1 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		81E7AE432005890F00F565E1 /* ForecastSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSearchView.swift; sourceTree = "<group>"; };
@@ -123,7 +129,10 @@
 		81E7AE502006E1D000F565E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				81E736A820082CB3009223E1 /* ImageAPIClient.swift */,
 				81E7AE512006E2CA00F565E1 /* WeatherAPIClient.swift */,
+				81E736A42007F3ED009223E1 /* Pixabay.swift */,
+				81E736A62007F43E009223E1 /* PixabayAPIClient.swift */,
 				81E7AE472006DDD200F565E1 /* Forecast.swift */,
 			);
 			path = Models;
@@ -202,11 +211,13 @@
 			files = (
 				81E7AE562006ED1400F565E1 /* FavoritesView.swift in Sources */,
 				81E7AE582006F06C00F565E1 /* FavoritesTableViewCell.swift in Sources */,
+				81E736A52007F3ED009223E1 /* Pixabay.swift in Sources */,
 				81E7AE442005890F00F565E1 /* ForecastSearchView.swift in Sources */,
 				81E7AE4C2006E12800F565E1 /* NetworkHelper.swift in Sources */,
 				5410A6D31FFFDF6500935A9A /* ZipCodeHelper.swift in Sources */,
 				81E7AE482006DDD200F565E1 /* Forecast.swift in Sources */,
 				81E7AE522006E2CA00F565E1 /* WeatherAPIClient.swift in Sources */,
+				81E736A72007F43E009223E1 /* PixabayAPIClient.swift in Sources */,
 				81E7AE5A20070C2700F565E1 /* DetailView.swift in Sources */,
 				81E7AE4A2006DFCC00F565E1 /* NSCacheHelper.swift in Sources */,
 				81E7AE462005919900F565E1 /* ForecastCollectionViewCell.swift in Sources */,
@@ -214,6 +225,7 @@
 				81E7AE422005761800F565E1 /* FavoritesViewController.swift in Sources */,
 				5410A6C11FFFDF1200935A9A /* AppDelegate.swift in Sources */,
 				81E736A32007CE8C009223E1 /* DetailViewController.swift in Sources */,
+				81E736A920082CB3009223E1 /* ImageAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

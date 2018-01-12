@@ -28,8 +28,6 @@ class DetailViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-  
-
     
     
     @objc func dismissView() {

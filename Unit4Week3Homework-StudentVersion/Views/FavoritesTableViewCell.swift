@@ -14,7 +14,7 @@ class FavoritesTableViewCell: UITableViewCell {
     lazy var cityImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        iv.image = #imageLiteral(resourceName: "monkey")
+        iv.image = nil
         return iv
     }()
     

@@ -40,6 +40,7 @@ class ForecastSearchView: UIView {
         textField.borderStyle = .bezel
         textField.placeholder = "Enter Zipcode"
         textField.textAlignment = .center
+        textField.keyboardType = .numbersAndPunctuation
         return textField
     }()
     
