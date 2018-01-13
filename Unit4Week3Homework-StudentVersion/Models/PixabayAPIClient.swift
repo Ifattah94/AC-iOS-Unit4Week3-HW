@@ -19,11 +19,16 @@ class PixabayAPIClient {
         let request = URLRequest(url: url)
         let completion: (Data) -> Void = {(data: Data) in
             do {
-                let pixInfo = try JSONDecoder().decode(PixabayWrapper.self, from: data)
-                if let pix = pixInfo.hits.first {
-                completionHandler(pix)
-                }
                 
+                let pixInfo = try JSONDecoder().decode(PixabayWrapper.self, from: data)
+                if !pixInfo.hits.isEmpty {
+                let numPix = pixInfo.hits.count
+                let randomIndex = Int(arc4random_uniform(UInt32(numPix - 1)))
+                let randPix = pixInfo.hits[randomIndex]
+                completionHandler(randPix)
+                } else {
+                    errorHandler(AppError.badUrl)
+                }
             }
             catch let error {
                 print(error)

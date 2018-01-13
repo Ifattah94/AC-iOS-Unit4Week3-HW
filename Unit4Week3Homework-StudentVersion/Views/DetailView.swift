@@ -30,6 +30,12 @@ class DetailView: UIView {
         return button
     }()
     
+    lazy var dismissButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "dismissButtonIcon"), for: .normal)
+        return button
+    }()
+    
     lazy var topLabel: UILabel = {
         let label = UILabel()
         
@@ -131,7 +137,7 @@ class DetailView: UIView {
     override func layoutSubviews() {
         //get the size of the elements
         super.layoutSubviews()
-        cityImageView.layer.cornerRadius = cityImageView.bounds.width/2.0
+        cityImageView.layer.cornerRadius = cityImageView.bounds.width/4.0
         cityImageView.layer.masksToBounds = true
        
     }
@@ -142,6 +148,7 @@ class DetailView: UIView {
         setupDismissView()
         setupContainterView()
         setupFavoriteButton()
+        setupDismissButton()
         setupTitleLabel()
         setupCityImageView()
         setupStackView()
@@ -175,9 +182,6 @@ class DetailView: UIView {
         addSubview(topLabel)
         
         topLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        
         topLabel.topAnchor.constraint(equalTo: favoriteButton.bottomAnchor, constant: 8).isActive = true
         topLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
@@ -201,6 +205,12 @@ class DetailView: UIView {
         favoriteButton.translatesAutoresizingMaskIntoConstraints = false
         favoriteButton.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16).isActive = true
         favoriteButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16).isActive = true
+    }
+    private func setupDismissButton() {
+        addSubview(dismissButton)
+        dismissButton.translatesAutoresizingMaskIntoConstraints = false
+        dismissButton.topAnchor.constraint(equalTo: favoriteButton.topAnchor).isActive = true
+        dismissButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16).isActive = true
     }
     
     

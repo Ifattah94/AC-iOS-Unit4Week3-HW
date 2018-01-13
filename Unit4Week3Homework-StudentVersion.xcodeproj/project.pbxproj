@@ -11,6 +11,8 @@
 		5410A6C81FFFDF1200935A9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5410A6C71FFFDF1200935A9A /* Assets.xcassets */; };
 		5410A6CB1FFFDF1200935A9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5410A6C91FFFDF1200935A9A /* LaunchScreen.storyboard */; };
 		5410A6D31FFFDF6500935A9A /* ZipCodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410A6D21FFFDF6500935A9A /* ZipCodeHelper.swift */; };
+		81D2D5CA200A95350040C85E /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2D5C9200A95350040C85E /* FileManagerHelper.swift */; };
+		81D2D5CC200A9D570040C85E /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2D5CB200A9D570040C85E /* UserDefaultsHelper.swift */; };
 		81E736A32007CE8C009223E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E736A22007CE8C009223E1 /* DetailViewController.swift */; };
 		81E736A52007F3ED009223E1 /* Pixabay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E736A42007F3ED009223E1 /* Pixabay.swift */; };
 		81E736A72007F43E009223E1 /* PixabayAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E736A62007F43E009223E1 /* PixabayAPIClient.swift */; };
@@ -35,6 +37,8 @@
 		5410A6CA1FFFDF1200935A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5410A6CC1FFFDF1200935A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5410A6D21FFFDF6500935A9A /* ZipCodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeHelper.swift; sourceTree = "<group>"; };
+		81D2D5C9200A95350040C85E /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
+		81D2D5CB200A9D570040C85E /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		81E736A22007CE8C009223E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		81E736A42007F3ED009223E1 /* Pixabay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixabay.swift; sourceTree = "<group>"; };
 		81E736A62007F43E009223E1 /* PixabayAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayAPIClient.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		81E7AE4D2006E16600F565E1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				81D2D5C9200A95350040C85E /* FileManagerHelper.swift */,
+				81D2D5CB200A9D570040C85E /* UserDefaultsHelper.swift */,
 				5410A6D21FFFDF6500935A9A /* ZipCodeHelper.swift */,
 				81E7AE492006DFCC00F565E1 /* NSCacheHelper.swift */,
 				81E7AE4B2006E12800F565E1 /* NetworkHelper.swift */,
@@ -218,6 +224,7 @@
 				81E7AE482006DDD200F565E1 /* Forecast.swift in Sources */,
 				81E7AE522006E2CA00F565E1 /* WeatherAPIClient.swift in Sources */,
 				81E736A72007F43E009223E1 /* PixabayAPIClient.swift in Sources */,
+				81D2D5CC200A9D570040C85E /* UserDefaultsHelper.swift in Sources */,
 				81E7AE5A20070C2700F565E1 /* DetailView.swift in Sources */,
 				81E7AE4A2006DFCC00F565E1 /* NSCacheHelper.swift in Sources */,
 				81E7AE462005919900F565E1 /* ForecastCollectionViewCell.swift in Sources */,
@@ -226,6 +233,7 @@
 				5410A6C11FFFDF1200935A9A /* AppDelegate.swift in Sources */,
 				81E736A32007CE8C009223E1 /* DetailViewController.swift in Sources */,
 				81E736A920082CB3009223E1 /* ImageAPIClient.swift in Sources */,
+				81D2D5CA200A95350040C85E /* FileManagerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,11 +10,13 @@ import UIKit
 
 class FavoritesView: UIView {
 
+   
+    
     lazy var favoritesTableView: UITableView = {
         let tv = UITableView()
         tv.register(FavoritesTableViewCell.self, forCellReuseIdentifier: "FavoriteCell")
         tv.backgroundColor = .orange 
-        //tv.dataSource = self 
+        //tv.dataSource = self
         
         return tv
     }()

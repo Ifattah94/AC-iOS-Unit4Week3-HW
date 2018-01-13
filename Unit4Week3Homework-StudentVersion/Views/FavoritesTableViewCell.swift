@@ -13,8 +13,8 @@ class FavoritesTableViewCell: UITableViewCell {
     
     lazy var cityImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
-        iv.image = nil
+        iv.contentMode = .scaleAspectFill
+        //iv.image = nil
         return iv
     }()
     
@@ -34,6 +34,11 @@ class FavoritesTableViewCell: UITableViewCell {
         backgroundColor = .white
         setupViews()
         
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupViews()
     }
     
     func setupCityImageView(){

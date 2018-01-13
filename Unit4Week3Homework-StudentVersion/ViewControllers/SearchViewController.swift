@@ -83,18 +83,19 @@ class SearchViewController: UIViewController {
 
     extension SearchViewController: UICollectionViewDelegate {
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let detailVC = DetailViewController()
+            let detailVC = DetailViewController(city: forecastSearchView.cityLabel.text!, forecast: forecasts[indexPath.row])
             let thisForecast = forecasts[indexPath.row]
-            if let cell = collectionView.cellForItem(at: indexPath) as? ForecastCollectionViewCell {
+            if (collectionView.cellForItem(at: indexPath) as? ForecastCollectionViewCell) != nil {
                 detailVC.modalTransitionStyle = .crossDissolve
                 detailVC.modalPresentationStyle = .overCurrentContext
                 present(detailVC, animated: true, completion: nil)
                 detailVC.detailView.setupDetailView(with: thisForecast, city: city)
                 
                 let getPixabayFromOnline = {(onlinePixabay: Pixabay) in
-                    
+                    detailVC.imageUrl = onlinePixabay.webURL
                     ImageAPIClient.manager.getImage(from: onlinePixabay.webURL, completionHandler: { (onlineImage: UIImage) in
                         detailVC.detailView.cityImageView.image = onlineImage
+                        
                     }, errorHandler: {print($0)})
                     
                     
